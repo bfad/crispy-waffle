@@ -1,0 +1,168 @@
+/*@tailwind base;*/
+@tailwind components;
+@tailwind utilities;
+
+/**
+* PRAGMA: Our theme variables
+**/
+:root {
+  --font-ui: -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "DIN 2014", "Helvetica Neue", Helvetica, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+
+  --font-editor-sans: Lato, Avenir, "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+
+  --font-editor-serif: Garamond, Didot, Georgia, Merriweather, "Times New Roman", serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", serif;
+
+  --font-monospace: Inconsolata, Consolas, Menlo, SFMono, "iA Writer Duo V", "iA Writer Mono V", Monaco, monospace,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", monospace;
+}
+
+/**
+* PRAGMA: Obsidian variables
+**/
+:root {
+  --default-font: var(--font-ui);
+  --mermaid-font: var(--default-font);
+  --reveal-font: var(--default-font);
+  --editor-font-size: 16px;
+}
+
+.theme-light {
+  --background-primary: theme('colors.stone.800');
+  --background-primary-alt: theme('colors.stone.900');
+  --background-secondary: theme('colors.zinc.900');
+  --background-secondary-alt: theme('colors.zinc.800');
+  --background-modifier-border: theme('colors.zinc.700');
+  --background-modifier-form-field: rgba(0, 0, 0, 0.3);
+  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: theme('colors.green.700');
+  --background-modifier-error: theme('colors.red.900');
+  --background-modifier-error-rgb: 127, 29, 29;
+  --background-modifier-error-hover: theme('colors.red.800');
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: theme('colors.violet.500');
+  --text-accent-hover: theme('colors.violet.400');
+  --text-normal: theme('colors.zinc.300');
+  --text-muted: theme('colors.zinc.400');
+  --text-faint: theme('colors.zinc.500');
+  --text-error: theme('colors.red.500');
+  --text-error-hover: theme('colors.red.600');
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: /*rgba(23, 48, 77, 0.99);*/ theme('colors.violet.900');
+  --text-on-accent: theme('colors.zinc.300');
+  --interactive-normal: theme('colors.zinc.800');
+  --interactive-hover: theme('colors.zinc.700');
+  --interactive-accent: theme('colors.violet.800');
+  --interactive-accent-rgb: 90, 33, 182;
+  --interactive-accent-hover: theme('colors.violet.900');
+  --interactive-success: theme('colors.green.700');
+  --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+  --scrollbar-bg: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+  --highlight-mix-blend-mode: lighten;
+}
+
+/**
+* PRAGMA: Editor / Preview styles
+**/
+.theme-light .view-content,
+.theme-light .markdown-preview-view {
+  --background-primary: theme('colors.zinc.200');
+  --background-primary-alt: theme('colors.zinc.300');
+  --background-secondary: theme('colors.stone.100');
+  --background-secondary-alt: theme('colors.stone.200');
+  --background-modifier-border: theme('colors.zinc.400');
+  --background-modifier-form-field: theme('colors.zinc.200');
+  --background-modifier-form-field-highlighted: theme('colors.zinc.200');
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: theme('colors.green.200');
+  --background-modifier-error: theme('colors.red.800');
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: theme('colors.red.700');
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: theme('colors.violet.600');
+  --text-accent-hover: theme('colors.violet.500');
+  --text-normal: theme('colors.zinc.800');
+  --text-muted: theme('colors.zinc.600');
+  --text-muted-rgb: 113, 113, 122;
+  --text-faint: theme('colors.zinc.500');
+  --text-error: theme('colors.red.900');
+  --text-error-hover: theme('colors.red.800');
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: /*rgba(204, 230, 255, 0.99);*/theme('colors.violet.300');
+  --text-on-accent: theme('colors.zinc.100');
+  --interactive-normal: theme('colors.zinc.100');
+  --interactive-hover: theme('colors.zinc.200');
+  --interactive-accent: theme('colors.violet.600');
+  --interactive-accent-rgb: 124, 58, 237;
+  --interactive-accent-hover: theme('colors.violet.500');
+  --interactive-success: theme('colors.green.800');
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+  --highlight-mix-blend-mode: darken;
+
+  @apply text-zinc-800 bg-zinc-200;
+}
+
+/* File name and action bar */
+.view-header {
+  @apply h-auto pt-0.5;
+}
+.view-header-title {
+  @apply font-light text-sm mt-0.5;
+}
+
+.view-header-icon, .view-actions {
+  @apply py-px px-1;
+}
+
+.view-action {
+  @apply top-auto;
+}
+
+/**
+* PRAGMA: Typography
+**/
+.view-content, .markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-preview-view {
+  font-family: var(--font-editor-sans);
+}
+
+.empty-state-title,
+.markdown-preview-view h1,
+.HyperMD-header.HyperMD-header-1,
+.cm-header-1 {
+  @apply text-4xl;
+}
+.markdown-preview-view h2,
+.HyperMD-header-2,
+.cm-header-2 {
+  @apply text-3xl;
+}
+.markdown-preview-view h3,
+.HyperMD-header-3,
+.cm-header-3 {
+  @apply text-2xl;
+}
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-s-obsidian .cm-header-4 {
+  @apply text-xl;
+}
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-s-obsidian .cm-header-5 {
+  @apply text-lg;
+}
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-s-obsidian .cm-header-6 {
+  @apply text-base;
+}
