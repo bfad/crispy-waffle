@@ -72,10 +72,10 @@
 **/
 .theme-light .view-content,
 .theme-light .markdown-preview-view {
-  --background-primary: theme('colors.zinc.200');
-  --background-primary-alt: theme('colors.zinc.300');
-  --background-secondary: theme('colors.stone.100');
-  --background-secondary-alt: theme('colors.stone.200');
+  --background-primary: theme('colors.zinc.100');
+  --background-primary-alt: theme('colors.zinc.200');
+  --background-secondary: theme('colors.stone.50');
+  --background-secondary-alt: theme('colors.stone.100');
   --background-modifier-border: theme('colors.zinc.400');
   --background-modifier-form-field: theme('colors.zinc.200');
   --background-modifier-form-field-highlighted: theme('colors.zinc.200');
@@ -108,7 +108,7 @@
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
   --highlight-mix-blend-mode: darken;
 
-  @apply text-zinc-800 bg-zinc-200;
+  @apply text-zinc-800 bg-zinc-100;
 }
 
 /* File name and action bar */
