@@ -116,7 +116,7 @@
   @apply h-auto pt-0.5;
 }
 .view-header-title {
-  @apply font-light text-sm mt-0.5;
+  @apply font-normal text-sm mt-0.5;
 }
 
 .view-header-icon, .view-actions {
