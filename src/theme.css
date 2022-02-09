@@ -70,8 +70,9 @@
 /**
 * PRAGMA: Editor / Preview styles
 **/
-.theme-light .view-content,
-.theme-light .markdown-preview-view {
+.theme-light .markdown-source-view,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-reading-view {
   --background-primary: theme('colors.zinc.100');
   --background-primary-alt: theme('colors.zinc.200');
   --background-secondary: theme('colors.stone.50');
