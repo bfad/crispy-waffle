@@ -167,6 +167,9 @@
 .cm-s-obsidian .cm-header-6 {
   @apply text-base;
 }
+.markdown-preview-view h6 {
+  color: inherit;
+}
 
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code {
