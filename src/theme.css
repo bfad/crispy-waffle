@@ -178,6 +178,11 @@
   font-size: 100%;
 }
 
+.markdown-source-view .HyperMD-list-line .cm-formatting-list-ul,
+.markdown-source-view .HyperMD-list-line .cm-formatting-list-ol {
+  padding-right: 5px;
+}
+
 
 /**
 * PRAGMA: Code block syntax highlighting
