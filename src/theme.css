@@ -249,6 +249,39 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
   transform: none;
 }
 
+.nav-header {
+  @apply py-1 px-3;
+}
+.nav-header .nav-action-button {
+  @apply p-0 m-0 mx-1 w-6 h-6 flex items-center justify-center;
+}
+.nav-header .nav-action-button > svg {
+  @apply w-4 h-4;
+}
+
+.nav-folder.mod-root {
+  @apply mx-2;
+}
+.nav-folder.mod-root > .nav-folder-title { @apply hidden }
+
+.nav-folder-title,
+.nav-file-title {
+  @apply text-sm m-0 p-0;
+}
+
+body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
+  background-color: transparent;
+}
+.nav-file-title.is-active, .nav-folder-title.is-active {}
+.nav-folder-collapse-indicator {
+  @apply w-auto ml-0;
+}
+
+.nav-file-title-content, .nav-folder-title-content {
+  border: none;
+  padding-top: 1px;
+}
+
 /**
 * PRAGMA: Typography
 **/
