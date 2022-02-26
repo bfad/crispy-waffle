@@ -193,9 +193,9 @@ svg.star {
 }
 .workspace-ribbon-collapse-btn svg {
   -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1.125em" height="1.125em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"%3E%3Cpath fill="currentColor" d="M28 4H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 22H12V6h16Z"%2F%3E%3C%2Fsvg%3E') no-repeat 50% 50%;
-  -webkit-mask-size: 1.5rem 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  -webkit-mask-size: 1.25rem 1.25rem;
+  height: 1.25rem;
+  width: 1.25rem;
 }
 .workspace-ribbon:not(.is-collapsed) .workspace-ribbon-collapse-btn svg,
 .workspace-tab-header.is-active svg.folder,
@@ -236,17 +236,49 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
 /**
 * PRAGMA: Sidbars
 **/
-.workspace-ribbon-collapse-btn {
-  @apply m-0 p-0 pt-1;
+.workspace-ribbon.side-dock-ribbon {
+  width: 36px;
+  flex-basis: 36px;
+  border: none;
 }
 .workspace-ribbon .workspace-ribbon-collapse-btn {
-  @apply pl-0.5;
+  margin: 0 0 0 4px;
+  padding: 2px 0 0 4px;
+  line-height: normal;
+  border: 1px solid transparent;
+  border-radius: 5px 0 0 5px;
+}
+.workspace-ribbon .workspace-ribbon-collapse-btn svg {
+
+}
+.workspace-ribbon.is-collapsed {
+  background-color: var(--background-secondary-alt);
 }
 .workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
   transform: rotateY(180deg);
+  margin: 0 4px 0 0;
 }
 .workspace-ribbon.mod-left.is-collapsed .workspace-ribbon-collapse-btn {
   transform: none;
+}
+
+.workspace-ribbon:not(.is-collapsed) .workspace-ribbon-collapse-btn {
+  background-color: var(--background-secondary);
+}
+
+
+.workspace-tab-header-container {
+  background-color: var(--background-secondary);
+  padding-top: 1px;
+}
+.workspace-tab-container-before, .workspace-tab-container-after {
+  display: none;
+}
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner, .workspace-tab-container-after.is-after-active .workspace-tab-header-inner, .workspace-tab-header.is-before-active .workspace-tab-header-inner, .workspace-tab-header.is-after-active .workspace-tab-header-inner {
+  background-color: var(--background-secondary);
+}
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+  border-top-left-radius: 0;
 }
 
 .nav-header {
