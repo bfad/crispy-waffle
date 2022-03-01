@@ -221,18 +221,35 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
 * PRAGMA: File name and action bar
 **/
 .view-header {
-  @apply h-auto pt-0.5;
+  @apply h-auto pt-0.5 border-0;
+  background-color: var(--background-primary);
 }
+.workspace-leaf.mod-active .view-header {
+  @apply border-0;
+  background-color: var(--background-secondary);
+}
+.view-header-title-container::after {
+  background: none !important;
+}
+
 .view-header-title {
   @apply font-normal text-sm mt-0.5;
+  color: var(--text-faint);
 }
 
 .view-header-icon, .view-actions {
   @apply py-px px-1;
+  color: var(--text-faint);
 }
 
 .view-action {
   @apply top-auto;
+  color: var(--text-faint);
+}
+
+.workspace-leaf.mod-active .view-header-icon, .view-actions,
+.workspace-leaf.mod-active .view-action {
+  color: var(--text-normal);
 }
 
 /**
@@ -266,6 +283,9 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
 }
 
 
+.workspace-tabs {
+  background-color: var(--background-secondary);
+}
 .workspace-tab-header-container {
   background-color: var(--background-secondary);
   padding-top: 1px;
