@@ -118,12 +118,6 @@
 .side-dock-ribbon-tab, .side-dock-ribbon-action {
   stroke-width: 4px;
 }
-.workspace-tab-header.is-active {
-  color: theme('colors.violet.600');
-}
-.workspace-tab-header:hover, .workspace-tab-header.is-active:hover {
-  color: theme('colors.violet.500');
-}
 .nav-action-button {
   color: var(--text-faint);
 }
@@ -197,16 +191,24 @@ svg.star {
   height: 1.25rem;
   width: 1.25rem;
 }
+
+.workspace-tab-header:hover svg {
+  color: theme('colors.violet.600');
+}
+
+.workspace-tab-header.is-active svg,
+.workspace-tab-header.is-active:hover svg {
+  color: theme('colors.violet.500');
+}
+
 .workspace-ribbon:not(.is-collapsed) .workspace-ribbon-collapse-btn svg,
-.workspace-tab-header.is-active svg.folder,
-.workspace-tab-header.is-active svg.search,
-.workspace-tab-header.is-active svg.star {
+.workspace-tab-header:hover svg:is(.folder,.search,.star) {
   background-color: theme('colors.violet.600');
 }
-.workspace-ribbon .workspace-ribbon-collapse-btn:hover svg,
-.workspace-tab-header:hover svg.folder,
-.workspace-tab-header:hover svg.search,
-.workspace-tab-header:hover svg.star {
+
+.workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn:hover svg,
+.workspace-tab-header.is-active svg:is(.folder,.search,.star),
+.workspace-tab-header.is-active:hover svg:is(.folder,.search,.star) {
   background-color: theme('colors.violet.500');
 }
 
@@ -242,21 +244,18 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
   border: none;
 }
 .workspace-ribbon .workspace-ribbon-collapse-btn {
-  margin: 0 0 0 4px;
+  margin: 1px 0 0 4px;
   padding: 2px 0 0 4px;
   line-height: normal;
   border: 1px solid transparent;
   border-radius: 5px 0 0 5px;
-}
-.workspace-ribbon .workspace-ribbon-collapse-btn svg {
-
 }
 .workspace-ribbon.is-collapsed {
   background-color: var(--background-secondary-alt);
 }
 .workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
   transform: rotateY(180deg);
-  margin: 0 4px 0 0;
+  margin: 1px 4px 0 0;
 }
 .workspace-ribbon.mod-left.is-collapsed .workspace-ribbon-collapse-btn {
   transform: none;
@@ -270,15 +269,28 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
 .workspace-tab-header-container {
   background-color: var(--background-secondary);
   padding-top: 1px;
+  border-left: 2px solid var(--background-secondary);
+  justify-content: center;
 }
 .workspace-tab-container-before, .workspace-tab-container-after {
   display: none;
 }
 .workspace-tab-container-before.is-before-active .workspace-tab-header-inner, .workspace-tab-container-after.is-after-active .workspace-tab-header-inner, .workspace-tab-header.is-before-active .workspace-tab-header-inner, .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-  background-color: var(--background-secondary);
+  background-color: inherit;
 }
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
   border-top-left-radius: 0;
+}
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-top-right-radius: 0;
+}
+.workspace-tab-header.is-active, .workspace-leaf .nav-header {
+  background-color: var(--background-secondary-alt);
+}
+.workspace-leaf .nav-header {
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 5px;
 }
 
 .nav-header {
