@@ -1,44 +1,43 @@
 /*@tailwind base;*/
-@tailwind components;
-@tailwind utilities;
 
 /**
 * PRAGMA: Our theme variables
 **/
+
 body {
   --font-text-theme: Lato, Avenir, "Proxima Nova", "Helvetica Neue", Helvetica, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-
   --font-monospace-theme: Inconsolata, Consolas, SFMono-Regular, Menlo, "iA Writer Duo V", "iA Writer Mono V", Monaco, monospace,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", monospace;
 }
 
 /* To get Dark Mode for the Chrome */
+
 .theme-light {
   --highlight-mix-blend-mode: lighten;
   --mono-rgb-0: 0, 0, 0;
   --mono-rgb-100: 255, 255, 255;
   --color-red-rgb: 239, 68, 68;
-  --color-red: theme('colors.red.500');
+  --color-red: #ef4444;
   --color-green-rgb: 21, 128, 61;
-  --color-green: theme('colors.green.700');
-  --color-orange: theme('colors.orange.500');
-  --color-yellow: theme('colors.amber.400');
-  --color-cyan: theme('colors.sky.600');
-  --color-blue: theme('colors.blue.700');
-  --color-purple: theme('colors.purple.700');
-  --color-pink: theme('colors.rose.600');
-  --color-base-00: theme('colors.stone.900');
-  --color-base-05: theme('colors.stone.800');
-  --color-base-10: theme('colors.stone.800');
-  --color-base-20: theme('colors.stone.700');
-  --color-base-25: theme('colors.stone.600');
-  --color-base-30: theme('colors.stone.500');
-  --color-base-35: theme('colors.stone.400');
-  --color-base-40: theme('colors.stone.300');
-  --color-base-50: theme('colors.stone.200');
-  --color-base-60: theme('colors.stone.100');
-  --color-base-70: theme('colors.stone.50');
+  --color-green: #15803d;
+  --color-orange: #f97316;
+  --color-yellow: #fbbf24;
+  --color-cyan: #0284c7;
+  --color-blue: #1d4ed8;
+  --color-purple: #7e22ce;
+  --color-pink: #e11d48;
+  --color-base-00: #1c1917;
+  --color-base-05: #292524;
+  --color-base-10: #292524;
+  --color-base-20: #44403c;
+  --color-base-25: #57534e;
+  --color-base-30: #78716c;
+  --color-base-35: #a8a29e;
+  --color-base-40: #d6d3d1;
+  --color-base-50: #e7e5e4;
+  --color-base-60: #f5f5f4;
+  --color-base-70: #fafaf9;
   --color-base-100: #FFFFFF;
   /* Don't allow users to set a custom accent color, for now */
   --accent-h: 258;
@@ -75,13 +74,11 @@ body {
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
     0px 30px 90px rgba(0, 0, 0, 0.2);
-
   --background-primary: var(--color-base-05);
   --background-primary-alt: var(--color-base-00);
-  --background-secondary: theme('colors.zinc.900');
-  --background-secondary-alt: theme('colors.zinc.800');
-  --background-modifier-border: theme('colors.zinc.700');
-
+  --background-secondary: #18181b;
+  --background-secondary-alt: #27272a;
+  --background-modifier-border: #3f3f46;
   --text-normal: var(--color-base-40);
   --text-muted: var(--color-base-35);
   --text-faint: var(--color-base-30);
@@ -95,6 +92,7 @@ body {
 /**
 * PRAGMA: Editor / Preview styles
 **/
+
 .theme-light .markdown-source-view,
 .theme-light .markdown-preview-view,
 .theme-light .markdown-reading-view,
@@ -103,27 +101,27 @@ body {
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
   --color-red-rgb: 127, 29, 29;
-  --color-red: theme('colors.red.900');
+  --color-red: #7f1d1d;
   --color-green-rgb: 22, 101, 52;
-  --color-green: theme('colors.green.800');
-  --color-orange: theme('colors.orange.700');
-  --color-yellow: theme('colors.amber.500');
-  --color-cyan: theme('colors.sky.700');
-  --color-blue: theme('colors.blue.800');
-  --color-purple: theme('colors.purple.800');
-  --color-pink: theme('colors.rose.600');
+  --color-green: #166534;
+  --color-orange: #c2410c;
+  --color-yellow: #f59e0b;
+  --color-cyan: #0369a1;
+  --color-blue: #1e40af;
+  --color-purple: #6b21a8;
+  --color-pink: #e11d48;
   --color-base-00: #ffffff;
-  --color-base-05: theme('colors.zinc.100');
-  --color-base-10: theme('colors.zinc.200');
-  --color-base-20: theme('colors.zinc.200');
-  --color-base-25: theme('colors.zinc.300');
-  --color-base-30: theme('colors.zinc.400');
-  --color-base-35: theme('colors.zinc.500');
-  --color-base-40: theme('colors.zinc.600');
-  --color-base-50: theme('colors.zinc.600');
-  --color-base-60: theme('colors.zinc.700');
-  --color-base-70: theme('colors.zinc.800');
-  --color-base-100: theme('colors.zinc.900');
+  --color-base-05: #f4f4f5;
+  --color-base-10: #e4e4e7;
+  --color-base-20: #e4e4e7;
+  --color-base-25: #d4d4d8;
+  --color-base-30: #a1a1aa;
+  --color-base-35: #71717a;
+  --color-base-40: #52525b;
+  --color-base-50: #52525b;
+  --color-base-60: #3f3f46;
+  --color-base-70: #27272a;
+  --color-base-100: #18181b;
   /* Don't allow users to set a custom accent color, for now */
   --accent-h: 262;
   --accent-s: 83.3%;
@@ -155,24 +153,25 @@ body {
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
     0px 30px 90px rgba(0, 0, 0, 0.2);
-
   --background-primary: var(--color-base-05);
   --background-primary-alt: var(--color-base-10);
-  --background-secondary: theme('colors.stone.50');
-  --background-secondary-alt: theme('colors.stone.100');
-  --background-modifier-border: theme('colors.stone.400');
-
+  --background-secondary: #fafaf9;
+  --background-secondary-alt: #f5f5f4;
+  --background-modifier-border: #a8a29e;
   --text-normal: var(--color-base-70);
   --text-muted: var(--color-base-50);
   --text-faint: var(--color-base-35);
   --text-on-accent: var(--color-base-05);
   --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--color-base-10);
-
-  @apply text-zinc-800 bg-zinc-100;
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
 /* old values */
+
 /*.theme-light {
   --background-primary: theme('colors.stone.800');
   --background-primary-alt: theme('colors.stone.900');
@@ -256,6 +255,7 @@ body {
 /**
 * PRAGMA: Icons
 **/
+
 /* .side-dock-ribbon-tab, .side-dock-ribbon-action {
   stroke-width: 4px;
 }
@@ -361,6 +361,7 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
 /**
 * PRAGMA: File name and action bar
 **/
+
 /* .view-header {
   @apply h-auto pt-0.5 border-0;
   background-color: var(--background-primary);
@@ -397,11 +398,10 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
 * PRAGMA: Sidbars
 **/
 
-
-svg.svg-icon.sidebar-left > path,
-svg.svg-icon.sidebar-right > path {
-  @apply hidden;
+svg.svg-icon.sidebar-left > path, svg.svg-icon.sidebar-right > path {
+  display: none;
 }
+
 svg.svg-icon.sidebar-left, svg.svg-icon.sidebar-right {
   -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1.125em" height="1.125em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"%3E%3Cpath fill="currentColor" d="M28 4H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 22H12V6h16Z"%2F%3E%3C%2Fsvg%3E') no-repeat 50% 50%;
   -webkit-mask-size: 1.25rem 1.25rem;
@@ -420,20 +420,20 @@ svg.svg-icon.sidebar-right {
 }
 
 /* Keep sidebar toggle to the left */
+
 .workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container {
   flex-direction: row-reverse;
 }
 
 /* adjust the left-spacing from the stoplight window buttons */
+
 .workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container {
   --frame-left-space: 28px;
 }
 
-
 .cm-tag {
   color: var(--code-tag);
 }
-
 
 /* .workspace-ribbon.side-dock-ribbon {
   width: 36px;
@@ -529,6 +529,7 @@ body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder
 /**
 * PRAGMA: Typography
 **/
+
 /* .view-content, .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-preview-view {
   font-family: var(--font-editor-sans);
@@ -581,10 +582,10 @@ body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder
   padding-right: 5px;
 } */
 
-
 /**
 * PRAGMA: Code block syntax highlighting
 **/
+
 /*.theme-light code[class*="language-"],
 .theme-light pre[class*="language-"] {
   @apply bg-stone-900 text-zinc-300;
